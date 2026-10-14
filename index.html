@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Découvrir le Bénin : présentation du projet</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm 15mm;
+    }
+
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #222222;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #006b3f;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 24pt;
+    }
+
+    h2 {
+      margin-top: 26px;
+      padding-bottom: 4px;
+      border-bottom: 3px solid #fcd116;
+      font-size: 16pt;
+      break-after: avoid;
+    }
+
+    h3 {
+      margin: 18px 0 6px;
+      font-size: 12.5pt;
+      break-after: avoid;
+    }
+
+    .liens {
+      padding: 10px 14px;
+      background-color: #f4f1ea;
+      border-left: 5px solid #006b3f;
+    }
+
+    .liens p {
+      margin: 3px 0;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #cccccc;
+    }
+
+    @media print {
+      body {
+        max-width: none;
+        padding: 0;
+      }
+    }
+
+    a {
+      color: #006b3f;
+    }
+
+    figure {
+      margin: 10px 0 16px;
+      break-inside: avoid;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      border: 1px solid #cccccc;
+    }
+
+    figure.etroit img {
+      width: 55%;
+      margin: 0 auto;
+    }
+
+    figure.mobile img {
+      width: 30%;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      margin-top: 4px;
+      color: #555555;
+      font-size: 9.5pt;
+      font-style: italic;
+      text-align: center;
+    }
+
+    pre {
+      margin: 8px 0 14px;
+      padding: 10px 12px;
+      background-color: #f6f6f6;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      font-size: 8.5pt;
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
+
+    table {
+      width: 100%;
+      margin: 8px 0 14px;
+      border-collapse: collapse;
+      font-size: 10pt;
+    }
+
+    th,
+    td {
+      padding: 5px 8px;
+      border: 1px solid #cccccc;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #f4f1ea;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+  <h1>Découvrir le Bénin</h1>
+  <p>Projet de synthèse Web Design for Everybody · Emmanuel Kakpo</p>
+
+  <div class="liens">
+    <p><strong>Site en ligne :</strong> <a href="https://ofsafoot.github.io/decouvrir-le-benin/">https://ofsafoot.github.io/decouvrir-le-benin/</a></p>
+    <p><strong>Code source :</strong> <a href="https://github.com/ofsafoot/decouvrir-le-benin">https://github.com/ofsafoot/decouvrir-le-benin</a></p>
+    <p><strong>Version PDF :</strong> <a href="decouvrir-le-benin-presentation.pdf">télécharger le document (PDF)</a></p>
+  </div>
+
+  <h2>Vidéo de démonstration</h2>
+  <p>La vidéo dure 2 min 28 et n'a pas de son : chaque écran a une légende en bas. Elle montre le site réactif, mes
+    quatre extras avec leur code, et les résultats des validateurs W3C et WAVE. Tout ce qu'elle montre est aussi
+    décrit par écrit plus bas.</p>
+  <video controls preload="metadata" width="1280" height="720" poster="img/responsive-accueil.jpg">
+    <source src="demo.mp4" type="video/mp4">
+    <a href="demo.mp4">Télécharger la vidéo (MP4)</a>
+  </video>
+
+  <h2>1. Le projet</h2>
+  <p>« Découvrir le Bénin » présente mon pays en quatre pages. J'ai suivi les esquisses rendues plus tôt dans le
+    cours.</p>
+  <table>
+    <tr>
+      <th>Page</th>
+      <th>Contenu</th>
+    </tr>
+    <tr>
+      <td>Accueil (page d'atterrissage)</td>
+      <td>Grande image avec un titre animé et un bouton, encadré « Le Bénin en bref », trois cartes vers les
+        sections.</td>
+    </tr>
+    <tr>
+      <td>Histoire et patrimoine</td>
+      <td>Abomey, Ouidah, Porto-Novo et la fête du Vodoun, en cartes sur une grille.</td>
+    </tr>
+    <tr>
+      <td>Nature et paysages</td>
+      <td>Six photos en flex, puis Ganvié, la Pendjari, les chutes de Kota et la côte.</td>
+    </tr>
+    <tr>
+      <td>Galerie photo</td>
+      <td>Galerie interactive à la souris et au clavier, et crédits de toutes les photos.</td>
+    </tr>
+  </table>
+  <p>Le site utilise un seul fichier CSS (<code>css/style.css</code>) et deux petits fichiers JavaScript
+    (<code>js/menu.js</code> et <code>js/galerie.js</code>). Les photos viennent de Wikimedia Commons, sous licences
+    libres. Leurs auteurs sont crédités sur la page Galerie.</p>
+
+  <h2>2. Validation W3C</h2>
+  <p>Les quatre pages passent le validateur HTML du W3C sans erreur ni avertissement. Captures faites sur le site en
+    ligne :</p>
+  <figure>
+    <img src="img/w3c-html.jpg" alt="Quatre résultats du validateur W3C : No errors or warnings to show">
+    <figcaption>Accueil, Patrimoine, Nature et Galerie : « Document checking completed. No errors or warnings to
+      show. »</figcaption>
+  </figure>
+  <p>La feuille de style passe aussi le validateur CSS du W3C :</p>
+  <figure>
+    <img src="img/w3c-css.jpg" alt="Validateur CSS du W3C : Félicitations ! Aucune erreur trouvée">
+    <figcaption>css/style.css : « Félicitations ! Aucune erreur trouvée. »</figcaption>
+  </figure>
+
+  <h2>3. Accessibilité (WAVE)</h2>
+  <p>Les quatre pages ont 0 erreur, 0 erreur de contraste et 0 alerte dans WAVE, avec un score AIM de 10 sur 10.</p>
+  <figure>
+    <img src="img/wave.jpg" alt="Résumés WAVE des quatre pages : 0 erreur, 0 erreur de contraste, 0 alerte">
+    <figcaption>Résumés WAVE, dans l'ordre : Accueil, Patrimoine, Nature, Galerie.</figcaption>
+  </figure>
+  <p>Ce que j'ai prévu pour l'accessibilité :</p>
+  <ul>
+    <li>un lien « Passer au contenu principal », caché jusqu'à ce qu'il reçoive le focus ;</li>
+    <li>un texte alternatif sur chaque photo, et un <code>alt=""</code> sur le drapeau du logo, qui est
+      décoratif ;</li>
+    <li>la page en cours signalée dans le menu avec <code>aria-current="page"</code> ;</li>
+    <li>des contrastes suffisants dans les deux palettes, claire et sombre ;</li>
+    <li>une galerie et un menu utilisables entièrement au clavier.</li>
+  </ul>
+  <figure class="etroit">
+    <img src="img/lien-evitement.jpg" alt="Le lien Passer au contenu principal visible en haut de la page">
+    <figcaption>Le lien d'évitement apparaît en jaune quand on appuie sur Tab.</figcaption>
+  </figure>
+
+  <h2>4. Un site réactif</h2>
+  <p>Le CSS est écrit en mobile-first : les styles de base sont ceux du téléphone, puis deux media queries
+    ajoutent la vue tablette (772 px) et la vue grand écran (992 px).</p>
+  <figure>
+    <img src="img/responsive-accueil.jpg" alt="La page d'accueil sur mobile, tablette et grand écran">
+    <figcaption>Accueil sur mobile (412 px), tablette (800 px) et grand écran (1280 px).</figcaption>
+  </figure>
+  <table>
+    <tr>
+      <th>Élément</th>
+      <th>Mobile</th>
+      <th>Tablette (772 px)</th>
+      <th>Grand écran (992 px)</th>
+    </tr>
+    <tr>
+      <td>Menu</td>
+      <td>Bouton « Menu »</td>
+      <td colspan="2">Liens visibles en ligne</td>
+    </tr>
+    <tr>
+      <td>« Le Bénin en bref »</td>
+      <td>1 colonne</td>
+      <td>2 colonnes</td>
+      <td>4 colonnes</td>
+    </tr>
+    <tr>
+      <td>Cartes de l'accueil</td>
+      <td>1 colonne</td>
+      <td>2 colonnes, la 3e sur toute la largeur</td>
+      <td>3 colonnes</td>
+    </tr>
+    <tr>
+      <td>Cartes Patrimoine</td>
+      <td>1 colonne</td>
+      <td colspan="2">2 colonnes</td>
+    </tr>
+    <tr>
+      <td>Photos Nature</td>
+      <td>1 par ligne</td>
+      <td>2 par ligne</td>
+      <td>3 par ligne</td>
+    </tr>
+    <tr>
+      <td>Miniatures de la galerie</td>
+      <td>2 colonnes</td>
+      <td colspan="2">4 colonnes</td>
+    </tr>
+  </table>
+  <figure>
+    <img src="img/responsive-patrimoine.jpg" alt="La page Patrimoine sur mobile et sur grand écran">
+    <figcaption>Page Patrimoine : 1 colonne sur mobile, 2 colonnes sur grand écran.</figcaption>
+  </figure>
+
+  <h2>5. Organisation du CSS</h2>
+  <p>Le fichier suit l'ordre de la page : réglages généraux, lien d'évitement, menu, bannières, grilles, galerie,
+    pied de page, puis les media queries. Les couleurs qui changent avec la palette sont des variables CSS, ce qui
+    rend le mode sombre très court. Extrait de la vue tablette :</p>
+  <pre>@media screen and (min-width: 772px) {
+  .js .menu-btn {
+    display: none;
+  }
+
+  #menu,
+  .js #menu {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    width: auto;
+    margin: 0;
+  }
+
+  ...
+
+  .infos,
+  .cartes,
+  .grille {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cartes .carte:last-child {
+    grid-column: span 2;
+  }
+
+  ...
+}</pre>
+
+  <h2>6. Mes quatre extras</h2>
+
+  <h3>Extra 1 : une galerie photo interactive en JavaScript</h3>
+  <p>Sur la page Galerie, quand on passe la souris sur une miniature, la photo s'affiche en grand avec son texte
+    alternatif. La galerie marche aussi au clavier : au chargement de la page, une boucle <code>for</code> ajoute
+    <code>tabindex="0"</code> à chaque miniature, puis <code>onfocus</code> et <code>onblur</code> appellent les
+    mêmes fonctions que la souris.</p>
+  <pre>&lt;body onload="addTabFocus()"&gt;
+...
+&lt;img class="preview" src="images/pendjari.jpg" alt="Des éléphants dans la Pendjari"
+  onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()"&gt;</pre>
+  <pre>function upDate(previewPic) {
+  let image = document.getElementById("image");
+  image.innerHTML = previewPic.alt;
+  image.style.backgroundImage = "url('" + previewPic.src + "')";
+}
+
+function unDo() {
+  let image = document.getElementById("image");
+  image.innerHTML = "Survolez une photo ci-dessous pour l'afficher ici.";
+  image.style.backgroundImage = "url('')";
+}
+
+function addTabFocus() {
+  console.log("Page chargée : ajout de tabindex sur les photos");
+
+  let photos = document.querySelectorAll(".preview");
+  for (let i = 0; i &lt; photos.length; i++) {
+    photos[i].setAttribute("tabindex", "0");
+  }
+}</pre>
+  <figure>
+    <img src="img/galerie-clavier.jpg" alt="La galerie avec la photo des éléphants affichée en grand">
+    <figcaption>La 7e miniature a reçu le focus avec Tab (contour en pointillés) : la photo et son texte s'affichent
+      en grand.</figcaption>
+  </figure>
+
+  <h3>Extra 2 : un menu mobile en JavaScript</h3>
+  <p>Sur téléphone, les liens sont remplacés par un bouton « Menu ». Le script ouvre et ferme le menu, met à jour
+    <code>aria-expanded</code> pour les lecteurs d'écran et ferme le menu avec la touche Échap. Si JavaScript est
+    désactivé, la classe <code>js</code> n'est pas ajoutée et les liens restent visibles.</p>
+  <pre>document.documentElement.classList.add("js");
+
+window.addEventListener("DOMContentLoaded", function () {
+  let bouton = document.querySelector(".menu-btn");
+  let menu = document.getElementById("menu");
+
+  bouton.addEventListener("click", function () {
+    let ouvert = menu.classList.toggle("ouvert");
+    bouton.setAttribute("aria-expanded", ouvert);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" &amp;&amp; menu.classList.contains("ouvert")) {
+      menu.classList.remove("ouvert");
+      bouton.setAttribute("aria-expanded", "false");
+      bouton.focus();
+    }
+  });
+});</pre>
+  <figure class="mobile">
+    <img src="img/menu-mobile.jpg" alt="Le menu ouvert sur téléphone">
+    <figcaption>Menu ouvert sur téléphone.</figcaption>
+  </figure>
+
+  <h3>Extra 3 : un mode sombre automatique</h3>
+  <p>Le site suit le réglage clair ou sombre de l'ordinateur ou du téléphone. Comme les couleurs sont des
+    variables, il suffit de les redéfinir dans une media query <code>prefers-color-scheme</code>. J'ai vérifié les
+    contrastes dans les deux palettes.</p>
+  <pre>:root {
+  --fond: #f4f1ea;
+  --texte: #222222;
+  --carte: #ffffff;
+  --lien: #006b3f;
+  --bordure: #dddddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #121212;
+    --texte: #eeeeee;
+    --carte: #1e1e1e;
+    --lien: #7fe0b0;
+    --bordure: #333333;
+  }
+}</pre>
+  <figure>
+    <img src="img/mode-sombre.jpg" alt="La page Patrimoine sur mobile et l'accueil sur grand écran en mode sombre">
+    <figcaption>Mode sombre : Patrimoine sur mobile et Accueil sur grand écran.</figcaption>
+  </figure>
+
+  <h3>Extra 4 : des animations et transitions CSS, qui respectent « mouvement réduit »</h3>
+  <p>Le titre, le texte et le bouton de l'accueil apparaissent en glissant vers le haut (<code>@keyframes</code>).
+    Les cartes se soulèvent au survol, les photos de la page Nature s'agrandissent légèrement et les liens du menu
+    changent de couleur en douceur. Le bouton « Commencer la visite » descend vers la section « Au programme » avec
+    un défilement fluide. Si l'utilisateur a activé « réduire les animations », tout cela est désactivé.</p>
+  <pre>@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}</pre>
+
+  <h2>7. Comment tester</h2>
+  <ul>
+    <li><strong>Responsive :</strong> réduire la largeur de la fenêtre, ou F12 puis Ctrl+Maj+M.</li>
+    <li><strong>Clavier :</strong> appuyer sur Tab dès le chargement pour voir le lien d'évitement, puis sur la page
+      Galerie pour parcourir les photos.</li>
+    <li><strong>Mode sombre et mouvement réduit :</strong> F12, menu ⋮, More tools, Rendering, puis « Emulate CSS
+      media feature ».</li>
+  </ul>
+  </main>
+</body>
+
+</html>
